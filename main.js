@@ -5,17 +5,20 @@ let win;
 
 function createWindow () {
   win = new BrowserWindow({
+    title: 'Float Browser',
     width: 800,
     height: 600,
     titleBarStyle: 'hidden',
     alwaysOnTop: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webviewTag: true
     }
   })
 
-  win.loadURL(config.url)
-  // win.loadFile(config.url)
+  // win.loadURL(config.url)
+    // win.loadFile(config.index)
+    win.loadFile("./index.html")
 }
 
 function toggleDevTools() {
