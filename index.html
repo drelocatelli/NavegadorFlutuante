@@ -19,6 +19,7 @@
     color: rebeccapurple;
   }
   input {
+    background:rgb(224, 224, 224);
      padding: 5px;
      width:100%;
      box-sizing: border-box;
@@ -32,9 +33,14 @@
 </style>
 <script>
     let input = document.querySelector("input")
+    input.ondblclick = function(){
+      input.select()
+    }
     input.onkeydown = (e) => { if(e.keyCode == 13) {
-      if(!(input.value.startsWith('http://'))){
-        var url = 'http://'+input.value
+      if(/[a-z]*\.com/gm.test(input.value)){
+        url = 'http://'+input.value
+      }else if(/[a-z]/gm.test(input.value)){
+        url = 'https://www.google.com/search?q='+encodeURI(input.value)
       }
       input.style.background = 'yellow'
       setTimeout(function(){
