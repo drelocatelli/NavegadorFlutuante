@@ -37,7 +37,7 @@
       input.select()
     }
     input.onkeydown = (e) => { if(e.keyCode == 13) {
-      if(/[a-z]*\.com/gm.test(input.value)){
+      if(/[a-z]*\.*/gm.test(input.value)){
         url = 'http://'+input.value
       }else if(/[a-z]/gm.test(input.value)){
         url = 'https://www.google.com/search?q='+encodeURI(input.value)
