@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "electromon": "^1.0.9",
+    "electron": "^13.1.2",
     "electron-reload": "^1.5.0",
     "nodemon": "^2.0.7"
   }

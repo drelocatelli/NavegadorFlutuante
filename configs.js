@@ -1,4 +1,4 @@
 
 module.exports = {
-  url: "http://www.google.com/",
+  url: "https://admin.mysql.uhserver.com/",
 }
